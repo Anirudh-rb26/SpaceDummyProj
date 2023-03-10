@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:space_dummyproj/class/item_class.dart';
 // import 'package:space_dummyproj/core/constants.dart';
 import 'package:space_dummyproj/widgets/card_widget.dart';
 
@@ -12,14 +13,14 @@ class HomePage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            const CardWidget(),
+            CardWidget(param: ItemClass(title: 'Rocket', imagePath: 'images/rocket.png')),
             Row(
-              children: const [
-                Expanded(child: CardWidget()),
-                Expanded(child: CardWidget()),
+              children: [
+                Expanded(child: CardWidget(param: ItemClass(title: 'Space', imagePath: 'images/space.png'))),
+                Expanded(child: CardWidget(param: ItemClass(title: 'Travel', imagePath: 'images/travel.png'))),
               ],
             ),
-            const CardWidget(),
+            CardWidget(param: ItemClass(title: "You", imagePath: 'images/yeah.png')),
           ],
         ),
       ),
