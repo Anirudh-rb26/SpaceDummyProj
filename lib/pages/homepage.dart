@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:space_dummyproj/class/item_class.dart';
 // import 'package:space_dummyproj/core/constants.dart';
 import 'package:space_dummyproj/widgets/card_widget.dart';
+import 'package:space_dummyproj/core/notifiers.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -22,6 +23,21 @@ class HomePage extends StatelessWidget {
             ),
             CardWidget(param: ItemClass(title: "You", imagePath: 'images/yeah.png')),
           ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          isDarkMode.value = !isDarkMode.value;
+        },
+        child: ValueListenableBuilder(
+          valueListenable: isDarkMode,
+          builder: (BuildContext context, dynamic isDark, Widget? child) {
+            if (!isDark) {
+              return const Icon(Icons.dark_mode);
+            } else {
+              return const Icon(Icons.light_mode);
+            }
+          },
         ),
       ),
     );
