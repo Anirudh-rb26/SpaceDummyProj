@@ -28,8 +28,4 @@ To experience SpaceDummyProj on your local machine, follow these steps:
 
 ## Contributions
 
-SpaceDummyProj is an open-source project, and contributions are welcome! If you have ideas for improvements, bug fixes, or exciting features, feel free to submit a pull request or raise an issue. Refer to the [contribution guidelines](CONTRIBUTING.md) for more information.
-
-## License
-
-SpaceDummyProj is released under the [MIT License](LICENSE).
+SpaceDummyProj is an open-source project, and contributions are welcome! If you have ideas for improvements, bug fixes, or exciting features, feel free to submit a pull request or raise an issue.
